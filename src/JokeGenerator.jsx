@@ -1,5 +1,5 @@
 import './style.css'
-import { useState, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 function GenerateJoke(){
@@ -7,11 +7,7 @@ function GenerateJoke(){
     const [punchline, setPunchline] = useState("")  
    
 
-    const generateRandomJoke = async () =>{
-        setSetup("")
-        setPunchline("")
-      
-
+    const fetchData = async () =>{
         try{
             let response = await axios.get('https://official-joke-api.appspot.com/jokes/random')
             let data = await response.data;
@@ -22,10 +18,18 @@ function GenerateJoke(){
         catch(error){
             console.log(error)
         }
-     
-      
-       
-    }
+    };
+
+    const generateRandomJoke = async () =>{
+        setSetup("")
+        setPunchline("")    
+        fetchData();
+         
+    };
+
+    useEffect(() =>{
+        fetchData();
+    },[])
     return(
         <>
             <div className='joke-container'>
