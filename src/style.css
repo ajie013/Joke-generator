@@ -1,83 +1,64 @@
 *{
-    padding: 0;
+    padding: o;
     margin: 0;
     box-sizing: border-box;
+   
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .joke-container{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 30px;
-    padding: 50px;
- }
- .joke-container .generateJokeBtn{
-     padding: 2%;
-     font-size: 2rem;
-     font-family: 'Courier New', Courier, monospace;
-     display: block;
-     border-radius: 10px;
-     background-color: rgb(6, 128, 6) ;
-     margin: 10px auto;
-     color: white;
-     font-weight: bolder;
-     border: none;
-     cursor: pointer;
- }
- .joke-container .generateJokeBtn:hover{
-     background-color: rgb(6, 159, 6) ;
- }
- .joke-container .joke-header{
-     color: white;
-     font-weight: bolder;
-     font-size: 3rem;
-     font-family: 'Courier New', Courier, monospace;
- }
- .joke-container .generateJokeBtn:active{
-     background-color: red;
- }
- 
- .joke-container .setup{
-     font-size: 3rem;
-     color: white;
-     text-align: center;
-     font-weight: bolder;
-     font-family: 'Courier New', Courier, monospace;
- }
- .joke-container .punchline{
-     color: red;
-     font-size: 2rem;
-     text-align: center;
-     font-weight: bolder;
-     margin-top: 10px;
- }
- 
- .joke-container .loader-wrapper {
+    padding: 15px;
+   
+}
+.joke-header{
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.punchline-wrapper{
+   
+    margin-top: 20px;
+    text-align: center;
+   
+    padding: 30px;
+    height: 350px;
+}
+.punchline{
+    color: red;
+}
+.setup  {
+    font-size: 1.5rem;
+}
+.generateJokeBtn{
+    display: block;
+    margin: 0 auto;
+    padding: 10px 30px;
+    letter-spacing: 2px;
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.generateJokeBtn:hover{
+    background-color: rgb(4, 75, 4);
+}
+.loader {
      position: absolute;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     z-index: 999;
-     /* background-color: rgba(0, 0, 0, 0.4); */
-      display: none;
- }
- 
- .joke-container .loader {
-     position: absolute;
-     top: 25%;
+     top: 40%;
      left: 50%;
      transform: translate(-50%, -50%);
      width: 48px;
      height: 48px;
-     border: 5px solid #FFF;
+     border: 5px solid #d8d5d5;
      border-bottom-color: transparent;
      border-radius: 50%;
      display: inline-block;
@@ -94,8 +75,4 @@
      100% {
          transform: rotate(360deg);
      }
- }
- .joke-container .joke-wrapper{
-    
-     height: 400px;
  }
