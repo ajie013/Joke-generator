@@ -38,11 +38,13 @@ function GenerateJoke(){
                 <div className='punchline-wrapper'>
 
               
-                {setup && punchline ?  
-                <div className='joke-container'>
-                    <p className='setup'>{setup}</p>
-                    <p className='punchline'>{punchline}</p>
-                </div> :     <div className="loader"></div> }
+                    {setup && punchline ?  
+                    <div className='joke-container'>
+                        <p className='setup'>{setup}</p>
+                        <p className='punchline'>{punchline}</p>
+                    </div> 
+                    :     
+                    <div className="loader"></div> }
                 </div>
                
              
